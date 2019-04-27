@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.css'
+import { Container } from 'react-bootstrap'
+import SearchTag from './containers/SearchTag'
+import Questions from './containers/Questions';
+import FilterTag from './containers/FilterTag';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <h1 style={{marginTop: 20, marginBottom: 30}}>Stackoverflow Basic View</h1>
+      <SearchTag />
+      <FilterTag />
+      <Questions />
+    </Container>
   );
 }
 

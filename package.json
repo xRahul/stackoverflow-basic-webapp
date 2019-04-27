@@ -1,11 +1,19 @@
 {
-  "name": "stackoverflow-interview",
+  "name": "stackoverflow-basic-webapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.3.1",
+    "cross-fetch": "^3.0.2",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0"
+    "react-loading-overlay": "^1.0.1",
+    "react-redux": "^7.0.2",
+    "react-scripts": "3.0.0",
+    "react-spinners": "^0.5.4",
+    "redux-logger": "^3.0.6",
+    "redux-starter-kit": "^0.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,5 +35,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.12.4",
+    "redux-devtools-extension": "^2.13.8"
   }
 }
