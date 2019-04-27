@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/stackoverflow-basic-webapp/static/js/main.2bbd684b.chunk.js",
+    "main.js.map": "/stackoverflow-basic-webapp/static/js/main.2bbd684b.chunk.js.map",
+    "runtime~main.js": "/stackoverflow-basic-webapp/static/js/runtime~main.94452cdd.js",
+    "runtime~main.js.map": "/stackoverflow-basic-webapp/static/js/runtime~main.94452cdd.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/stackoverflow-basic-webapp/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.2e4304fa.chunk.js": "/stackoverflow-basic-webapp/static/js/2.2e4304fa.chunk.js",
+    "static/js/2.2e4304fa.chunk.js.map": "/stackoverflow-basic-webapp/static/js/2.2e4304fa.chunk.js.map",
+    "index.html": "/stackoverflow-basic-webapp/index.html",
+    "precache-manifest.d7357a870a4839b30042294b13736f01.js": "/stackoverflow-basic-webapp/precache-manifest.d7357a870a4839b30042294b13736f01.js",
+    "service-worker.js": "/stackoverflow-basic-webapp/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/stackoverflow-basic-webapp/static/css/2.22a7d4ef.chunk.css.map"
+  }
+}
