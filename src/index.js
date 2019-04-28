@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
 import HomePage from './components/HomePage'
 import QuestionPageContainer from './containers/QuestionPageContainer';
 import configureStore from './store/store'
@@ -11,9 +11,9 @@ const store = configureStore()
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router basename={'/stackoverflow-basic-webapp'}>
-      <Route exact path={`${process.env.PUBLIC_URL}/:tagName?`} component={HomePage} />
-      <Route path={`${process.env.PUBLIC_URL}/question/:questionId`} component={QuestionPageContainer} />
+    <Router >
+      <Route exact path={`/:tagName?`} component={HomePage} />
+      <Route path={`/question/:questionId`} component={QuestionPageContainer} />
     </Router>
   </Provider>,
   document.getElementById('root')
