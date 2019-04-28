@@ -38,7 +38,7 @@ export function updateSearchValueOnHomePage(searchValue) {
 export const fetchQuestionsByTag = function (tag) {
   return dispatch => {
     dispatch(getQuestionsByTag(tag))
-    return fetch(`https://api.stackexchange.com/2.2/tags/${tag}/faq?site=stackoverflow&filter=!9Z(-wwYGT`)
+    return fetch(`https://api.stackexchange.com/2.2/tags/${tag}/faq?site=stackoverflow&filter=!0WJ3X8Z2siA7(ExeUINqXJd0*`)
       .then(response => response.json())
       .then(json => {
         if ('error_id' in json) {

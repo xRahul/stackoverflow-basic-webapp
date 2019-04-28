@@ -5,11 +5,12 @@ import { Container } from 'react-bootstrap'
 import SearchTag from '../containers/SearchTag'
 import Questions from '../containers/Questions';
 import QuestionsFilterTag from '../containers/QuestionsFilterTag';
+import Header from './Header';
 
 function HomePage({ match: { params: { tagName } } }) {
   return (
     <Container>
-      <h1 style={{marginTop: 20, marginBottom: 30}}>Stackoverflow Basic View</h1>
+      <Header />
       <SearchTag tagName={tagName} />
       <QuestionsFilterTag />
       <Questions />

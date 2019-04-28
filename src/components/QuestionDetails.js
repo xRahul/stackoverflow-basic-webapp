@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Card, Badge } from 'react-bootstrap'
+import { Card, Badge, ListGroup, ListGroupItem, Button } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 
 
@@ -21,7 +21,7 @@ export default class QuestionDetails extends React.Component {
     if (!this.props.titleAsHeader) {
       if (this.props.titleHasLink) {
         return (
-          <NavLink to={`/question/` + this.props.questionId}>
+          <NavLink to={`/question/` + this.props.questionId} style={{ textDecoration: 'none', color: 'black' }}>
             <Card.Title
               dangerouslySetInnerHTML={this.createMarkup(this.props.title)} />
           </NavLink>
@@ -38,7 +38,7 @@ export default class QuestionDetails extends React.Component {
     if (this.props.titleAsHeader) {
       if (this.props.titleHasLink) {
         return (
-          <NavLink to={`/question/` + this.props.questionId}>
+          <NavLink to={`/question/` + this.props.questionId} style={{ textDecoration: 'none', color: 'black' }}>
             <Card.Header>
               <Card.Title
                 dangerouslySetInnerHTML={this.createMarkup(this.props.title)} />
@@ -65,7 +65,7 @@ export default class QuestionDetails extends React.Component {
 
   render() {
       return (
-        <Card style = {{marginBottom: 20}}>
+        <Card style = {{marginBottom: 20}} border={this.props.borderColor}>
           {this.titleInHeader()}
           <Card.Body>
             {this.titleInBody()}
@@ -76,9 +76,43 @@ export default class QuestionDetails extends React.Component {
               </a>
             </Card.Text>
           </Card.Body>
-          <Card.Body>
+          <ListGroup className="list-group-flush">
+            <ListGroupItem>
+              {this.props.isAnswered &&
+                <Button variant="success" style={{ marginRight: 5 }}>
+                  Answered
+                  <span className="sr-only">Accepted Answer</span>
+                </Button>
+              }
+              {this.props.answerCount !== undefined &&
+                <Button variant="light" style={{ marginRight: 5 }}>
+                  Answers <Badge variant="dark">{this.props.answerCount}</Badge>
+                  <span className="sr-only">Answer Count</span>
+                </Button>
+              }
+              {this.props.score !== undefined &&
+                <Button variant="info" style={{ marginRight: 5 }}>
+                  Score <Badge variant="light">{this.props.score}</Badge>
+                  <span className="sr-only">Answer Score</span>
+                </Button>
+              }
+              {this.props.upvotes !== undefined &&
+                <Button variant="dark" style={{ marginRight: 5 }}>
+                  Upvotes <Badge variant="light">{this.props.upvotes}</Badge>
+                  <span className="sr-only">Number of Upvotes</span>
+                </Button>
+              }
+              {this.props.downvotes !== undefined &&
+                <Button variant="secondary" style={{ marginRight: 5 }}>
+                  DownVotes <Badge variant="light">{this.props.downvotes}</Badge>
+                  <span className="sr-only">Number of DownVotes</span>
+                </Button>
+              }
+            </ListGroupItem>
+            <ListGroupItem>
             {this.listTags()}
-          </Card.Body>
+            </ListGroupItem>
+          </ListGroup>
         </Card>
       )
   }
@@ -92,5 +126,11 @@ QuestionDetails.propTypes = {
   titleHasLink: PropTypes.bool,
   titleAsHeader: PropTypes.bool,
   questionId: PropTypes.number,
-  tags: PropTypes.array
+  tags: PropTypes.array,
+  isAnswered: PropTypes.bool,
+  answerCount: PropTypes.number,
+  score: PropTypes.number,
+  upvotes: PropTypes.number,
+  downvotes: PropTypes.number,
+  borderColor: PropTypes.string
 }

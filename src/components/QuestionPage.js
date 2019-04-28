@@ -6,6 +6,7 @@ import AnswerList from './AnswerList'
 import Loader from './Loader';
 import AnswersFilterTag from '../containers/AnswersFilterTag'
 import { Form } from 'react-bootstrap'
+import Header from './Header';
 
 
 export default class QuestionPage extends React.Component {
@@ -18,9 +19,7 @@ export default class QuestionPage extends React.Component {
     const question = this.props.question
     return (
       <Container>
-        <h1 style={{marginTop: 20, marginBottom: 30}}>
-          Stackoverflow Basic View
-        </h1>
+        <Header />
         {this.props.hasError &&
           <Form.Text className="text-muted">
             {this.props.errorMessage}
@@ -35,7 +34,13 @@ export default class QuestionPage extends React.Component {
               link={question.link}
               title={question.title}
               body={question.body}
+              tags={question.tags}
               titleAsHeader={true}
+              isAnswered={question.is_answered}
+              answerCount={question.answer_count}
+              score={question.score}
+              upvotes={question.up_vote_count}
+              downvotes={question.down_vote_count}
             />
             <AnswersFilterTag />
             <AnswerList

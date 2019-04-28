@@ -11,13 +11,18 @@ export default class AnswerList extends React.Component {
     const listItems = answers ? answers.filter((answer) => {
       if (!this.props.filterBy) return true
       return answer.body.indexOf(this.props.filterBy) !== -1
-    }).map((answer) =>
+    }).map((answer, index) =>
       <AnswerDetails
         key={answer.answer_id}
         link={answer.link}
         body={answer.body}
         truncateBody={false}
         answerId={answer.answer_id}
+        isAccepted={answer.is_accepted}
+        score={answer.score}
+        upvotes={answer.up_vote_count}
+        downvotes={answer.down_vote_count}
+        borderColor={index%2===0 ? 'warning' : 'info' }
       />
     ) : []
 

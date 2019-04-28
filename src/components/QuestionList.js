@@ -13,7 +13,7 @@ export default class QuestionList extends React.Component {
       if (!this.props.filterBy) return true
       return question.title.indexOf(this.props.filterBy) !== -1
         || question.body.indexOf(this.props.filterBy) !== -1
-    }).map((question) =>
+    }).map((question, index) =>
       <QuestionDetails
         key={question.question_id}
         link={question.link}
@@ -23,6 +23,12 @@ export default class QuestionList extends React.Component {
         titleHasLink={true}
         questionId={question.question_id}
         tags={question.tags}
+        isAnswered={question.is_answered}
+        answerCount={question.answer_count}
+        score={question.score}
+        upvotes={question.up_vote_count}
+        downvotes={question.down_vote_count}
+        borderColor={index%2===0 ? 'warning' : 'info' }
       />
     ) : []
     return (
