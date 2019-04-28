@@ -13,22 +13,23 @@ const mapStateToProps = (state) => {
     showFilterTag = state.questionsByTag.questionsByTags[state.questionsByTag.currentTag].items.length > 0
   }
   return {
-    showFilterTag
+    showFilterTag,
+    filterType: 'Question'
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    filterQuestions: (searchString) => {
+    filterList: (searchString) => {
       dispatch(filterQuestionsByString(searchString))
     }
   }
 }
 
 
-const FilterTag = connect(
+const QuestionsFilterTag = connect(
   mapStateToProps,
   mapDispatchToProps
 )(FilterTagComponent)
 
-export default FilterTag
+export default QuestionsFilterTag

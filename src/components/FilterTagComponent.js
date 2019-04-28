@@ -11,7 +11,7 @@ export default class FilterTagComponent extends React.Component {
   }
 
   _handleChange(e) {
-    this.props.filterQuestions(e.target.value);
+    this.props.filterList(e.target.value);
   }
 
   render() {
@@ -19,8 +19,8 @@ export default class FilterTagComponent extends React.Component {
         <>
         { this.props.showFilterTag &&
           <Form>
-            <Form.Group controlId="formFilterTagControlId">
-              <Form.Label>Filter Questions:</Form.Label>
+            <Form.Group controlId={"formFilterTagControlId" + this.props.filterType}>
+              <Form.Label>Filter {this.props.filterType}s:</Form.Label>
               <Form.Control type="text" placeholder="Search string"
                 onChange={this._handleChange}
               />
@@ -33,6 +33,7 @@ export default class FilterTagComponent extends React.Component {
 }
 
 FilterTagComponent.propTypes = {
-  filterQuestions: PropTypes.func,
-  showFilterTag: PropTypes.bool
+  filterList: PropTypes.func,
+  showFilterTag: PropTypes.bool,
+  filterType: PropTypes.string
 };

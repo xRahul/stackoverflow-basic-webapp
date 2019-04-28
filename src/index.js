@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import App from './App';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import HomePage from './components/HomePage'
+import QuestionPageContainer from './containers/QuestionPageContainer';
 import configureStore from './store/store'
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from './serviceWorker'
 
 const store = configureStore()
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <Route exact path="/:tagName?" component={HomePage} />
+      <Route path="/question/:questionId" component={QuestionPageContainer} />
+    </Router>
   </Provider>,
   document.getElementById('root')
 );

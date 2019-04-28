@@ -3,10 +3,13 @@ import {
 } from 'react-redux'
 import SearchTagComponent from '../components/SearchTagComponent';
 import {
-  fetchQuestionsByTag
+  fetchQuestionsByTag, updateSearchValueOnHomePage
 } from '../actions/search'
+import { withRouter } from "react-router"
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
+  const urlTagName = ownProps.tagName
+  const searchValue = state.questionsByTag ? state.questionsByTag.searchValue : ''
   var availableQuota, totalQuota
   if (state.questionsByTag.hasOwnProperty('questionsByTags') &&
     state.questionsByTag.questionsByTags.hasOwnProperty(state.questionsByTag.currentTag)) {
@@ -16,7 +19,9 @@ const mapStateToProps = (state) => {
 
   return {
     availableQuota,
-    totalQuota
+    totalQuota,
+    urlTagName,
+    searchValue
   }
 }
 
@@ -24,14 +29,17 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchQuestions: (tagName) => {
       dispatch(fetchQuestionsByTag(tagName))
+    },
+    updateSearchValue: (value) => {
+      dispatch(updateSearchValueOnHomePage(value))
     }
   }
 }
 
 
-const SearchTag = connect(
+const SearchTag = withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(SearchTagComponent)
+)(SearchTagComponent))
 
 export default SearchTag

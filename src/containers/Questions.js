@@ -4,7 +4,9 @@ import {
 import QuestionList from '../components/QuestionList';
 
 const mapStateToProps = (state) => {
-  const isLoading = state.questionsByTag.isFetching
+  const isFetching = state.questionsByTag ? state.questionsByTag.isFetching : false
+  const hasError = state.questionsByTag ? state.questionsByTag.hasError : false
+  const errorMessage = state.questionsByTag ? state.questionsByTag.errorMessage : ''
   var questions, filterBy
   if (state.questionsByTag.hasOwnProperty('questionsByTags') &&
     state.questionsByTag.questionsByTags.hasOwnProperty(state.questionsByTag.currentTag)) {
@@ -13,9 +15,11 @@ const mapStateToProps = (state) => {
   }
 
   return {
-    isLoading,
+    isFetching,
     questions,
-    filterBy
+    filterBy,
+    hasError,
+    errorMessage
   }
 }
 
