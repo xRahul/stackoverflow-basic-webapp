@@ -8,7 +8,7 @@ import {
 import { withRouter } from "react-router"
 
 const mapStateToProps = (state, ownProps) => {
-  const urlTagName = ownProps.tagName
+  const urlTagName = ownProps.urlTagName
   const searchValue = state.questionsByTag ? state.questionsByTag.searchValue : ''
   var availableQuota, totalQuota
   if (state.questionsByTag.hasOwnProperty('questionsByTags') &&

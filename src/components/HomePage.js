@@ -11,7 +11,7 @@ function HomePage({ match: { params: { tagName } } }) {
   return (
     <Container>
       <Header />
-      <SearchTag tagName={tagName} />
+      <SearchTag urlTagName={tagName} />
       <QuestionsFilterTag />
       <Questions />
     </Container>

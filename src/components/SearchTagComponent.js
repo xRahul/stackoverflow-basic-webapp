@@ -12,9 +12,9 @@ export default class SearchTagComponent extends React.Component {
     this._handleChange = this._handleChange.bind(this)
   }
 
-  componentDidUpdate() {
-    if (this.props.urlTagName) {
-      this.searchInput = this.props.urlTagName
+  componentDidMount() {
+    if (this.searchInput) {
+      this.props.fetchQuestions(this.searchInput)
     }
   }
 
@@ -68,5 +68,7 @@ SearchTagComponent.propTypes = {
   availableQuota: PropTypes.number,
   totalQuota: PropTypes.number,
   urlTagName: PropTypes.string,
-  history: PropTypes.object
+  history: PropTypes.object,
+  hasError: PropTypes.bool,
+  errorMessage: PropTypes.string
 };
