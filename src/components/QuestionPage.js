@@ -35,7 +35,6 @@ export default class QuestionPage extends React.Component {
               title={question.title}
               body={question.body}
               tags={question.tags}
-              titleAsHeader={true}
               isAnswered={question.is_answered}
               answerCount={question.answer_count}
               score={question.score}

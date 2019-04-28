@@ -17,48 +17,31 @@ export default class QuestionDetails extends React.Component {
     return this.createMarkup(this.props.body)
   }
 
-  titleInBody() {
-    if (!this.props.titleAsHeader) {
-      if (this.props.titleHasLink) {
-        return (
-          <NavLink to={`/question/` + this.props.questionId} style={{ textDecoration: 'none', color: 'black' }}>
+  title() {
+    if (this.props.titleHasLink) {
+      return (
+        <NavLink to={`/question/` + this.props.questionId} style={{ textDecoration: 'none', color: 'black' }}>
+          <Card.Header>
             <Card.Title
               dangerouslySetInnerHTML={this.createMarkup(this.props.title)} />
-          </NavLink>
-        )
-      }
-      return (
+          </Card.Header>
+        </NavLink>
+      )
+    }
+    return (
+      <Card.Header>
         <Card.Title
           dangerouslySetInnerHTML={this.createMarkup(this.props.title)} />
-      )
-    } else return
-  }
-
-  titleInHeader() {
-    if (this.props.titleAsHeader) {
-      if (this.props.titleHasLink) {
-        return (
-          <NavLink to={`/question/` + this.props.questionId} style={{ textDecoration: 'none', color: 'black' }}>
-            <Card.Header>
-              <Card.Title
-                dangerouslySetInnerHTML={this.createMarkup(this.props.title)} />
-            </Card.Header>
-          </NavLink>
-        )
-      }
-      return (
-        <Card.Header>
-          <Card.Title
-            dangerouslySetInnerHTML={this.createMarkup(this.props.title)} />
-        </Card.Header>
-      )
-    } else return
+      </Card.Header>
+    )
   }
 
   listTags() {
     return this.props.tags.map((tag) => {
       return (
-        <Badge key={tag} pill variant="secondary" style={{ marginRight: 5 }}>{tag}</Badge>
+        <NavLink key={tag} to={`/` + tag} style={{ textDecoration: 'none' }}>
+          <Badge pill variant="secondary" style={{ marginRight: 5 }}>{tag}</Badge>
+        </NavLink>
       )
     })
   }
@@ -66,9 +49,8 @@ export default class QuestionDetails extends React.Component {
   render() {
       return (
         <Card style = {{marginBottom: 20}} border={this.props.borderColor}>
-          {this.titleInHeader()}
+          {this.title()}
           <Card.Body>
-            {this.titleInBody()}
             <Card.Text dangerouslySetInnerHTML={this.setBody()} />
             <Card.Text >
               <a href={this.props.link} target={'blank'} style={{ textDecoration: 'none' }}>

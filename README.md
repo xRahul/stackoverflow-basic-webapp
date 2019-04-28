@@ -20,7 +20,6 @@
 
 ### Next
 
-* Make the app more robust by adding small UX features
 * Fix the code smells and duplication
 * Add UTs
 

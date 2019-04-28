@@ -10,11 +10,21 @@ export default class SearchTagComponent extends React.Component {
     this.searchInput = props.urlTagName
     this._handleKeyDown = this._handleKeyDown.bind(this)
     this._handleChange = this._handleChange.bind(this)
+    this.state = {
+      searchValue: this.searchInput
+    }
   }
 
   componentDidMount() {
     if (this.searchInput) {
       this.props.fetchQuestions(this.searchInput)
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.urlTagName !== this.props.urlTagName) {
+      this.props.fetchQuestions(this.props.urlTagName)
+      this.setState({searchValue: this.props.urlTagName})
     }
   }
 
@@ -31,6 +41,7 @@ export default class SearchTagComponent extends React.Component {
 
   _handleChange(e) {
     this.searchInput = e.target.value;
+    this.setState({searchValue: this.searchInput})
   }
 
   render() {
@@ -49,6 +60,7 @@ export default class SearchTagComponent extends React.Component {
                 defaultValue={this.searchInput}
                 onKeyDown={this._handleKeyDown}
                 onChange={this._handleChange}
+                value={this.state.searchValue}
               />
               <Form.Text className="text-muted">
                 {this.props.availableQuota !== undefined &&
