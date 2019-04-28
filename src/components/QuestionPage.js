@@ -25,8 +25,8 @@ export default class QuestionPage extends React.Component {
             {this.props.errorMessage}
           </Form.Text>
         }
-        {this.props.isLoading && <Loader/>}
-        {!this.props.isLoading && !this.props.hasError && question &&
+        {this.props.isFetching && <Loader/>}
+        {!this.props.isFetching && !this.props.hasError && question &&
           <>
             <QuestionDetails
               key={question.question_id}
@@ -55,7 +55,7 @@ export default class QuestionPage extends React.Component {
 }
 
 QuestionPage.propTypes = {
-  isLoading: PropTypes.bool,
+  isFetching: PropTypes.bool,
   filterBy: PropTypes.string,
   questionId: PropTypes.string,
   question: PropTypes.object,
