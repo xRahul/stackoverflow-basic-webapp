@@ -16,11 +16,13 @@
 * Added realtime filtering that reduces the number of items(questions or answers) from the list for better readability
 * Created using react/redux and public stackoverflow APIs
 * Tells you the free quota for both APIs used
+* Shows relevant metadata for Questions and Answers like score, votes etc.
 
-### Next items
+### Next
 
-* Display more metadata related to Questions and Answers
-* Add some styling to make it look better
+* Make the app more robust by adding small UX features
+* Fix the code smells and duplication
+* Add UTs
 
 ## Available Scripts
 
