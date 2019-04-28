@@ -11,9 +11,9 @@ const store = configureStore()
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
-      <Route exact path="/:tagName?" component={HomePage} />
-      <Route path="/question/:questionId" component={QuestionPageContainer} />
+    <Router basename={'/stackoverflow-basic-webapp'}>
+      <Route exact path={`${process.env.PUBLIC_URL}/:tagName?`} component={HomePage} />
+      <Route path={`${process.env.PUBLIC_URL}/question/:questionId`} component={QuestionPageContainer} />
     </Router>
   </Provider>,
   document.getElementById('root')

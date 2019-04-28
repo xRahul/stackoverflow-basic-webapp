@@ -21,7 +21,7 @@ export default class QuestionDetails extends React.Component {
     if (!this.props.titleAsHeader) {
       if (this.props.titleHasLink) {
         return (
-          <NavLink to={'/question/' + this.props.questionId}>
+          <NavLink to={`${process.env.PUBLIC_URL}/question/` + this.props.questionId}>
             <Card.Title
               dangerouslySetInnerHTML={this.createMarkup(this.props.title)} />
           </NavLink>
@@ -38,7 +38,7 @@ export default class QuestionDetails extends React.Component {
     if (this.props.titleAsHeader) {
       if (this.props.titleHasLink) {
         return (
-          <NavLink to={'/question/' + this.props.questionId}>
+          <NavLink to={`${process.env.PUBLIC_URL}/question/` + this.props.questionId}>
             <Card.Header>
               <Card.Title
                 dangerouslySetInnerHTML={this.createMarkup(this.props.title)} />

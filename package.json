@@ -1,7 +1,7 @@
 {
   "name": "stackoverflow-basic-webapp",
   "version": "0.1.0",
-  "homepage": "https://xRahul.github.io/stackoverflow-basic-webapp",
+  "homepage": "https://rahulja.in/stackoverflow-basic-webapp",
   "private": false,
   "dependencies": {
     "bootstrap": "^4.3.1",
