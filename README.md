@@ -17,6 +17,11 @@
 * Created using react/redux and public stackoverflow APIs
 * Tells you the free quota for both APIs used
 
+### Next items
+
+* Display more metadata related to Questions and Answers
+* Add some styling to make it look better
+
 ## Available Scripts
 
 In the project directory, you can run:
