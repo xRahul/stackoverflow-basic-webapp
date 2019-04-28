@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/stackoverflow-basic-webapp/static/js/main.32b504c1.chunk.js",
-    "main.js.map": "/stackoverflow-basic-webapp/static/js/main.32b504c1.chunk.js.map",
+    "main.js": "/stackoverflow-basic-webapp/static/js/main.ca88e6c2.chunk.js",
+    "main.js.map": "/stackoverflow-basic-webapp/static/js/main.ca88e6c2.chunk.js.map",
     "runtime~main.js": "/stackoverflow-basic-webapp/static/js/runtime~main.94452cdd.js",
     "runtime~main.js.map": "/stackoverflow-basic-webapp/static/js/runtime~main.94452cdd.js.map",
     "static/css/2.22a7d4ef.chunk.css": "/stackoverflow-basic-webapp/static/css/2.22a7d4ef.chunk.css",
-    "static/js/2.d6bf638b.chunk.js": "/stackoverflow-basic-webapp/static/js/2.d6bf638b.chunk.js",
-    "static/js/2.d6bf638b.chunk.js.map": "/stackoverflow-basic-webapp/static/js/2.d6bf638b.chunk.js.map",
+    "static/js/2.c2973ce4.chunk.js": "/stackoverflow-basic-webapp/static/js/2.c2973ce4.chunk.js",
+    "static/js/2.c2973ce4.chunk.js.map": "/stackoverflow-basic-webapp/static/js/2.c2973ce4.chunk.js.map",
     "index.html": "/stackoverflow-basic-webapp/index.html",
-    "precache-manifest.edd62e7a94f827118b8df9cf09a14ef5.js": "/stackoverflow-basic-webapp/precache-manifest.edd62e7a94f827118b8df9cf09a14ef5.js",
+    "precache-manifest.8edbb2cf63d934832542efc12ca4f4a6.js": "/stackoverflow-basic-webapp/precache-manifest.8edbb2cf63d934832542efc12ca4f4a6.js",
     "service-worker.js": "/stackoverflow-basic-webapp/service-worker.js",
     "static/css/2.22a7d4ef.chunk.css.map": "/stackoverflow-basic-webapp/static/css/2.22a7d4ef.chunk.css.map"
   }

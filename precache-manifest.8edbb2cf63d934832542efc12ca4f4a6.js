@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3e12456654470276540ae21a461acc55",
+    "revision": "52525233eb837def1771f9cbb17cdc59",
     "url": "/stackoverflow-basic-webapp/index.html"
   },
   {
-    "revision": "dfdf610a9314dc62ac5d",
+    "revision": "57af5ad970ecd3013123",
     "url": "/stackoverflow-basic-webapp/static/css/2.22a7d4ef.chunk.css"
   },
   {
-    "revision": "dfdf610a9314dc62ac5d",
-    "url": "/stackoverflow-basic-webapp/static/js/2.d6bf638b.chunk.js"
+    "revision": "57af5ad970ecd3013123",
+    "url": "/stackoverflow-basic-webapp/static/js/2.c2973ce4.chunk.js"
   },
   {
-    "revision": "05d81c1a5be8ffdfb716",
-    "url": "/stackoverflow-basic-webapp/static/js/main.32b504c1.chunk.js"
+    "revision": "b269ce3f0306d89f9ca8",
+    "url": "/stackoverflow-basic-webapp/static/js/main.ca88e6c2.chunk.js"
   },
   {
     "revision": "8d3146b773b956ca24ed",
