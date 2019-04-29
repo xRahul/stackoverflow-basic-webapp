@@ -1,8 +1,9 @@
 [![GitHub license](https://img.shields.io/github/license/xRahul/stackoverflow-basic-webapp.svg)](https://github.com/xRahul/stackoverflow-basic-webapp/blob/master/License.txt)
 [![Build Status](https://travis-ci.org/xRahul/stackoverflow-basic-webapp.svg?branch=master)](https://travis-ci.org/xRahul/stackoverflow-basic-webapp)
 [![Releases](https://img.shields.io/github/release/xRahul/stackoverflow-basic-webapp.svg)](https://github.com/xRahul/stackoverflow-basic-webapp/releases/latest)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a9e7471636ac4d53aecb/maintainability)](https://codeclimate.com/github/xRahul/stackoverflow-basic-webapp/maintainability)
 [![CodeFactor](https://www.codefactor.io/repository/github/xrahul/stackoverflow-basic-webapp/badge)](https://www.codefactor.io/repository/github/xrahul/stackoverflow-basic-webapp)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a9e7471636ac4d53aecb/maintainability)](https://codeclimate.com/github/xRahul/stackoverflow-basic-webapp/maintainability)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7eb9a663448d4943a21bf119a5833fc4)](https://www.codacy.com/app/xRahul/stackoverflow-basic-webapp)
 
 
 ## Basic Stackoverflow Webapp *with better filters*
