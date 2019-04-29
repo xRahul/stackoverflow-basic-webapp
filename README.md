@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c9542be668844749da8518b9f76731d)](https://app.codacy.com/app/xRahul/stackoverflow-basic-webapp?utm_source=github.com&utm_medium=referral&utm_content=xRahul/stackoverflow-basic-webapp&utm_campaign=Badge_Grade_Dashboard)
 [![GitHub license](https://img.shields.io/github/license/xRahul/stackoverflow-basic-webapp.svg)](https://github.com/xRahul/stackoverflow-basic-webapp/blob/master/License.txt)
 [![Build Status](https://travis-ci.org/xRahul/stackoverflow-basic-webapp.svg?branch=master)](https://travis-ci.org/xRahul/stackoverflow-basic-webapp)
 [![Releases](https://img.shields.io/github/release/xRahul/stackoverflow-basic-webapp.svg)](https://github.com/xRahul/stackoverflow-basic-webapp/releases/latest)
